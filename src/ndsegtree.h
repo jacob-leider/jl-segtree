@@ -138,12 +138,12 @@ struct Operation
   }
 };
 
-template <int n> class SegmentTree
+template <int n> class NdSegmentTree
 {
 public:
   static constexpr int N = 1 << n;
 
-  SegmentTree(const std::vector<int> &arr, const std::array<int, n> &dims)
+  NdSegmentTree(const std::vector<int> &arr, const std::array<int, n> &dims)
   {
     entire_domain_ = {std::array<int, n>(), dims};
     int tree_size =
